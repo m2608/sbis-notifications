@@ -1,0 +1,15 @@
+{
+  "name": "sbis-notifications",
+  "version": "0.0.1",
+  "dependencies": {
+    "ini": "^4.0.0",
+    "nbb": "^1.2.171",
+    "node-fetch": "^3.0.0",
+    "sqlite3": "^5.1.6",
+    "tmp": "^0.2.3",
+    "websocket": "^1.0.0"
+  },
+  "bin": {
+    "sbis-notifications": "index.mjs"
+  }
+}
