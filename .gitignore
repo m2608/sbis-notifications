@@ -1,6 +1,7 @@
 node_modules/
 .clj-kondo/
 .lsp/
+.nrepl-port
 ?/
 package-lock.json
 sample.*
