@@ -25,7 +25,7 @@
   (.toISOString (js/Date.)))
 
 (defn record->hashmap
-  "Преобразуем запись в формате СБИС в хешмап."
+  "Преобразует запись в формате СБИС в хешмап."
   [record]
   (zipmap (map (comp keyword :n) (:s record)) (:d record)))
 
@@ -35,7 +35,7 @@
   (spawn "notify-send" (clj->js [text])))
 
 (defn stomp-connect
-  "Возвращает сообщает для начального подключения к stomp."
+  "Возвращает сообщение для начального подключения к stomp."
   []
   (string/join "\n"
             ["CONNECT"
