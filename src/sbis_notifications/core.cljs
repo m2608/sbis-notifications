@@ -107,7 +107,7 @@
 
 (defn parse-notice
   [data]
-  (-> data record->hashmap :notice record->hashmap :view))
+  (-> data record->hashmap :notice record->hashmap :in_page_data))
 
 (defn send-keepalive
   "Запускет цикл отправки keepalive сообщений в подключение `conn`."
@@ -130,7 +130,7 @@
       (when (= (:event-type header) "notificationcenter.notice")
         (println (now) "// Notification received.")
         (when-let [notice (parse-notice data)]
-          (send-desktop-notification (str (:header notice) "\n" (:text notice))))))))
+          (send-desktop-notification (str (:header notice) "\n" (:body notice))))))))
 
 (defn get-handler-message
   "Возвращает функцию обработки сообщений."
